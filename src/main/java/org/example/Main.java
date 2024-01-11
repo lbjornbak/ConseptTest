@@ -11,7 +11,7 @@ public class Main {
             //Note to self. BiFunction takes to input values and one return value
             // Also, "operation" is just a name for the function
             Function<Integer, String> converter) {
-            // Note to self: Function only takes one
+            // Note to self: Function only takes one value
             // There are predefined Functions up to four inputs.
             // Also the same for "converter"
         int result = operation.apply(x, y);
