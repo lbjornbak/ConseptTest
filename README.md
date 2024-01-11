@@ -1,2 +1,1 @@
-# ConseptTest
-Testing some basic concepts
+The purpose of this repo is to test some basic concepts
