@@ -3,6 +3,14 @@ package org.example;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
+@FunctionalInterface
+// Note to self: This annotation is used to indicate that the PentaFunction interface is a functional interface.
+// A functional interface is an interface that only has one abstract method (SAM - Single Abstract Method).
+// This annotation helps ensure that it only has one abstract method.
+interface PentaFunction<T, U, V, W, X, R> {
+    R apply(T t, U u, V v, W w, X x);
+    // This is a single abstract method named apply. This method takes five parameters
+}
 
 public class Main {
 
@@ -14,24 +22,34 @@ public class Main {
         return converter.apply(result);
     }
 
+    public static <T, U, V, W, X, R> R performOperation(T t, U u, V v, W w, X x, PentaFunction<T, U, V, W, X, R> operation) {
+        return operation.apply(t, u, v, w, x);
+    }
 
     public static void main(String[] args) {
         int num1 = 5;
         int num2 = 10;
+        int num3 = 2;
+        int num4 = 3;
+        int num5 = 7;
 
 
         System.out.print("Hello and welcome! \n This is to run a test some concepts");
         // Define multiply as a lambda expression
         BiFunction<Integer, Integer, Integer> multiply = (a, b) -> a * b;
 
-        // Define Integer to String as a lambda expression
+        // Define Integer to String function as a lambda expression
         Function<Integer, String> intToString = Object::toString;
 
+        // Define  customOperation
+        PentaFunction<Integer, Integer, Integer, Integer, Integer, Integer> customOperation =
+                (a, b, c, d, e) -> (a + b) * (c - d) / e;
 
         String result = performOperation(num1, num2, multiply, intToString);
+        int result2 = performOperation(num1, num2, num3, num4, num5, customOperation);
 
-
-        System.out.println("Result as string: " + result);
+        System.out.println("Result1 as string: " + result);
+        System.out.println("Result2 of custom operation: " + result2);
 
     }
 }
