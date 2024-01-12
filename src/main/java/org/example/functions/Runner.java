@@ -11,6 +11,7 @@ public class Runner {
 
             Scanner reader = new Scanner(System.in);
 
+            System.out.println("---------------------------------------------------------------------------------");
             System.out.println("Runner started: Please select function for test");
             System.out.println("Please select from 1-5 what runner you want to start");
             System.out.println("1: Start lambda tester");
@@ -18,6 +19,7 @@ public class Runner {
             System.out.println();
             System.out.println();
             System.out.println("5: Exit");
+            System.out.println("");
 
 
             int input = Integer.parseInt(reader.nextLine());
@@ -48,6 +50,11 @@ public class Runner {
                     }
                     continue;
             }
+
+            for (int i = 0; i < 50; i++) {
+                System.out.println();
+            }
+
         } while(true);
     }
 }
