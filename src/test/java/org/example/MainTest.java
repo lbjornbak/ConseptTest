@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.Main;
-import org.junit.Test;
+import org.example.functions.Functions;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
@@ -17,7 +17,7 @@ public class MainTest {
         System.out.println("Testing performOperation...");
 
         // Test multipy and int to string
-        String result1 = Main.performOperation(5, 10, (a, b) -> a * b, Object::toString);
+        String result1 = Functions.performOperation(5, 10, (a, b) -> a * b, Object::toString);
         if (result1.equals("50")) {
             System.out.println("\u001B[32mTest case 1 passed: Result is 50\u001B[0m"); // Green color
         } else {
@@ -29,7 +29,7 @@ public class MainTest {
         System.out.println("Testing usePentaFunction...");
 
         // Test customOperation
-        int result2 = Main.usePentaFunction(5, 10, 2, 3, 7, (a, b, c, d, e) -> (a + b) * (c - d) / e);
+        int result2 = Functions.usePentaFunction(5, 10, 2, 3, 7, (a, b, c, d, e) -> (a + b) * (c - d) / e);
         if (result2 == 35) {
             System.out.println("\u001B[32mTest case 2 passed: Result is 35\u001B[0m"); // Green color
         } else {
@@ -40,7 +40,7 @@ public class MainTest {
     public static void testCustomPentaFunction() {
         System.out.println("Testing CustomPentaFunction...");
 
-        Main.CustomPentaFunction customPentaFunction = new Main.CustomPentaFunction();
+        Functions.CustomPentaFunction customPentaFunction = new Functions.CustomPentaFunction();
 
         // Test CustomPentaFunction
         int result3 = customPentaFunction.apply(10, 20, 3, 4, 5);
