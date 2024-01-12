@@ -2,9 +2,6 @@ package org.example;
 
 import org.example.functions.Functions;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
-
 public class MainTest {
 
     public static void main(String[] args) {

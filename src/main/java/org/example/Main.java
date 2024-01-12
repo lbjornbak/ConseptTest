@@ -1,10 +1,6 @@
 package org.example;
 
-import org.example.functions.Functions;
 import org.example.functions.Runner;
-
-import java.util.function.BiFunction;
-import java.util.function.Function;
 
 public class Main {
 
