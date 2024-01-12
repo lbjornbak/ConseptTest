@@ -1,4 +1,4 @@
-package org.example;
+package org.example.interfaces;
 
 @FunctionalInterface
 // Note to self: This annotation is used to indicate that the PentaFunction interface is a functional interface.

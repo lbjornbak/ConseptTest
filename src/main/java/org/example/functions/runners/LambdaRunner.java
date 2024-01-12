@@ -1,6 +1,6 @@
 package org.example.functions.runners;
 
-import org.example.PentaFunction;
+import org.example.interfaces.PentaFunction;
 import org.example.functions.Functions;
 
 import java.util.function.BiFunction;
